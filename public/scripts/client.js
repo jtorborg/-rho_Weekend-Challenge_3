@@ -12,6 +12,8 @@ $('#calcNumbers').on('submit', function(event) {
         math[element.name] = element.value;
     });//end of forEach
     console.log(math);
+    $('#calcNumbers').find('input[type=number]').val('');
+
 
 if(math.operator == 'add') {
 $.ajax({
@@ -43,12 +45,16 @@ $.ajax({
       data: math,
       success: appendDom
   });
-
 }
 });//end of event listener
 
 function appendDom(response) {
     console.log('server says:', response);
-    $('#container').text(response);
+    $('#container').append('<p class = "totalanswer">'+ response + '</p>');
 };//end of appendDom function
+$("#clearButton").on('click', function () {
+//
+console.log("clear button works");
+     $('.totalanswer').remove();
+});
 }); //end of Doc Ready function

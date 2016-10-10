@@ -4,51 +4,48 @@
 <head>
     <meta charset="utf-8">
     <title>rho_Weekend_Challenge_3</title>
+    <link href="https://fonts.googleapis.com/css?family=Titillium+Web" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="../styles/styles.css">
     <script src="../vendor/jquery-3.1.0.min.js"></script>
     <script type="text/javascript" src="../scripts/client.js"></script>
-
-
 </head>
 
 <body>
+    <h1>Rho Calculator</h1>
 
-<!-- Each numerical value and the mathematical
-operator type will be bundled up in an object and then sent to the server via a POST request.-->
-
-<!-- Finally, build a clear button that resets the whole experience. -->
+    <h2>Enter two Values</h2>
 
 
+    <form id="calcNumbers">
+        <label for="firstvalue">First Value:</label>
+        <input type="number" id="firstvalue" name="firstvalue" />
 
-  <h1>Enter a Value</h1>
-
-
-   <form id="calcNumbers">
-    <label for="firstvalue">First Value</label>
-    <input type="number" id="firstvalue" name="firstvalue" />
-
-    <select name="operator">
-      <option value="add">Add</option>
-      <option value="subtract">Subtract</option>
-      <option value="multiply">Multiply</option>
-      <option value="divide">Divide</option>
+        <select name="operator">
+      <option value="add" data-operation="add">Add</option>
+      <option value="subtract" data-operation="subtract">Subtract</option>
+      <option value="multiply" data-operation="multiply">Multiply</option>
+      <option value="divide" data-operation="divide">Divide</option>
     </select>
 
 
-    <label for="secondvalue">Second Value</label>
-    <input type="number" id="secondvalue" name="secondvalue" />
+        <label for="secondvalue">Second Value:</label>
+        <input type="number" id="secondvalue" name="secondvalue" />
 
-    <button id = "calcButton" type="submit">Calculate</button>
-</form>
+        <button id="calcButton" type="submit">Calculate</button>
+    </form>
 
-<div id = "clear">
+    <div id="clear">
 
+    </div>
+    <div>
+        <span id="total">
+    Total:
+  </span>
+    </div>
 
-</div>
-
-<div id = "container">
-
-</div>
+    <div id="container">
+      <button id='clearButton'>Clear</button>
+    </div>
 
 </body>
 

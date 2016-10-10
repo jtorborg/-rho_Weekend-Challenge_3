@@ -1,13 +1,47 @@
+* {
+  font-family: 'Titillium Web', sans-serif;
+
+
+}
+
 body {
     background-color:   #E6EEF3;  /*#9a93e1; purple*/
 }
 
+#calcNumbers {
+display: block;
+padding: 20px;
+
+
+}
+
 #container {
     background-color: #F2C38F;
+    width: 300px;
+    text-align: right;
+    padding: 20px;
+    margin-left: 800px;
 }
 
 h1 {
 
 color: #9a93e1;
+text-align: center;
+
+}
+
+
+h2 {
+
+color: #9a93e1;
+text-align: center;
+
+}
+
+#total {
+  background-color: #4286f4;
+margin-left: 800px;
+text-align: left;
+width: 80px;
 
 }
